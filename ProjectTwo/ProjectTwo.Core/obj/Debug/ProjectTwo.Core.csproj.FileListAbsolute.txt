@@ -1,0 +1,12 @@
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\bin\Debug\ProjectTwo.Core.exe.config
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\bin\Debug\ProjectTwo.Core.exe
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\bin\Debug\ProjectTwo.Core.pdb
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\obj\Debug\ProjectTwo.Core.csproj.AssemblyReference.cache
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\obj\Debug\ProjectTwo.Core.csproj.CoreCompileInputs.cache
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\obj\Debug\ProjectTwo.Core.exe
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\obj\Debug\ProjectTwo.Core.pdb
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\bin\Debug\DotMP.dll
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\bin\Debug\DotMP.xml
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Вузовский ад\4 курс 1 семестр\Параллельное программирование\ProjectPartTwo.Core\ProjectTwo\ProjectTwo.Core\obj\Debug\ProjectT.62DCD624.Up2Date
