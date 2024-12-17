@@ -12,17 +12,22 @@ namespace ProjectTwo.Core
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            int hash_length = 6;
-            var hg = new HashGenerator();
-            string hash = hg.generateHash(hash_length);
-            var mainer = new Mainer();
-
             MPI.Environment.Run(ref args, num =>
             {
+                int hash_length = 6;
+                var hg = new HashGenerator();
+                string hash = string.Empty;
+
+                if (num.Rank == 0)
+                {
+                    hash = hg.generateHash(hash_length);
+                }
+
+                MPI.Communicator.world.Broadcast(ref hash, 0);
+
+                var mainer = new Mainer();
                 mainer.Launch(hash_length, hash, num);
             });
-
-            Console.ReadLine();
         }
     }
 }

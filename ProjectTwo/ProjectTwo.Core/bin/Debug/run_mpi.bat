@@ -13,5 +13,4 @@ set EXE_NAME=ProjectTwo.Core.exe
 for %%p in (4 8 16 32) do (
     echo Running with %%p processes...
     mpiexec -n %%p %EXE_NAME%
-    exit
 )pause
