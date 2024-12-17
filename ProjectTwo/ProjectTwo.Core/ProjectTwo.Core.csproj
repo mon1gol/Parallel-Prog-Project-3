@@ -36,6 +36,9 @@
     <Reference Include="DotMP, Version=1.6.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DotMP.1.6.1\lib\net471\DotMP.dll</HintPath>
     </Reference>
+    <Reference Include="MPI, Version=1.4.0.0, Culture=neutral, PublicKeyToken=29b4a045737654fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\MPI.NET.1.4.0\lib\netstandard2.0\MPI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

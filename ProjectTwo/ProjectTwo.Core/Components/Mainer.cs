@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MPI;
+using System;
 using System.Diagnostics;
 using System.IO;
 
@@ -12,37 +13,30 @@ namespace ProjectTwo.Core.Components
         /// <param name="N">длина хэша</param>
         /// <param name="target_hash">заданный хэш для подбора</param>
         private const string FILE_PATH = "ThreadsInfo.txt";
-        public void Launch(int N, string target_hash, int[] threads)
+        public void Launch(int N, string target_hash, MPI.Intracommunicator num)
         {
-            File.Delete(FILE_PATH);
-            foreach (uint t in threads)
-            {
-                hashSelectionSeveralThreads(N, target_hash, t);
-            }
+            hashSelectionSeveralThreads(N, target_hash, num);
         }
-        public void hashSelectionSeveralThreads(int N, string target_hash, uint num_threads)
+        public void hashSelectionSeveralThreads(int N, string target_hash, MPI.Intracommunicator num)
         {
-            DotMP.Parallel.ParallelRegion(num_threads: num_threads, action: () =>
+            string hash_symbols = "0123456789abcdef";
+            int num_combinations = (int)Math.Pow(hash_symbols.Length, N);
+            var st = new Stopwatch();
+
+            st.Start();
+
+            for (int i = 0; i < num_combinations; i++)
             {
-                string hash_symbols = "0123456789abcdef";
-                int num_combinations = (int)Math.Pow(hash_symbols.Length, N);
-                var st = new Stopwatch();
+                string tmp = generateMaybeHashString(i, N, hash_symbols);
 
-                st.Start();
-
-                DotMP.Parallel.For(0, num_combinations, i =>
+                if (hashChecking(tmp, target_hash))
                 {
-                    string tmp = generateMaybeHashString(i, N, hash_symbols);
-
-                    if (hashChecking(tmp, target_hash))
-                    {
-                        Console.WriteLine($"Подбор завершен, результат: {tmp}");
-                        st.Stop();
-                        File.AppendAllText(FILE_PATH, num_threads + "\t" + st.Elapsed.Milliseconds.ToString() + Environment.NewLine);
-                        return;
-                    }
-                });
-            });
+                    Console.WriteLine($"Подбор завершен, результат: {tmp}");
+                    st.Stop();
+                    File.AppendAllText(FILE_PATH, num.Rank + "\t" + st.Elapsed.Milliseconds.ToString() + System.Environment.NewLine);
+                    return;
+                }
+            }
         }
         /// <summary>
         /// Генерация хэша заданной длины

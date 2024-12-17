@@ -1,5 +1,6 @@
 ﻿using ProjectTwo.Core.Components;
 using System;
+using System.Diagnostics;
 
 namespace ProjectTwo.Core
 {
@@ -9,15 +10,18 @@ namespace ProjectTwo.Core
         /// Точка входа
         /// </summary>
         /// <param name="args"></param>
-        static void Main()
+        static void Main(string[] args)
         {
-            int[] threads = new int[] { 1, 2, 4, 8, 16 };
             int hash_length = 6;
-
             var hg = new HashGenerator();
             string hash = hg.generateHash(hash_length);
             var mainer = new Mainer();
-            mainer.Launch(hash_length, hash, threads);
+
+            MPI.Environment.Run(ref args, num =>
+            {
+                mainer.Launch(hash_length, hash, num);
+            });
+
             Console.ReadLine();
         }
     }
