@@ -4,7 +4,7 @@ using System.IO;
 
 namespace ProjectTwo.Core.Components
 {
-    internal class Mainer
+    public class Mainer
     {
         private const string FILE_PATH = "ThreadsInfo.txt";
 
