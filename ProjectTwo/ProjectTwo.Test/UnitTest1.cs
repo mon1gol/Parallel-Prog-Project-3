@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProjectTwo.Core.Components;
-using System;
 
 namespace UnitTestProject1
 {
