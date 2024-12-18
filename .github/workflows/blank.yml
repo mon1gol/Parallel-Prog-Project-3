@@ -19,6 +19,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./ProjectTwo/ProjectTwo.sln
     - name: Build
-      run: dotnet build --no-restore ./ProjectTwo/ProjectTwo.Core/ProjectTwo.sln
+      run: dotnet build --no-restore ./ProjectTwo/ProjectTwo.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal ./ProjectTwo/ProjectTwo.Test/ProjectTwo.sln
+      run: dotnet test --no-build --verbosity normal ./ProjectTwo/ProjectTwo.sln
