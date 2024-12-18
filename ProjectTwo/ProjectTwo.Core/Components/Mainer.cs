@@ -9,12 +9,12 @@ namespace ProjectTwo.Core.Components
     {
         private const string FILE_PATH = "ThreadsInfo.txt";
 
-        public void Launch(int N, string target_hash, MPI.Intracommunicator num)
+        public void Launch(int N, string target_hash, Intracommunicator num)
         {
             hashSelectionSeveralThreads(N, target_hash, num);
         }
 
-        public void hashSelectionSeveralThreads(int N, string target_hash, MPI.Intracommunicator num)
+        public void hashSelectionSeveralThreads(int N, string target_hash, Intracommunicator num)
         {
             string hash_symbols = "0123456789abcdef";
             int num_combinations = (int)Math.Pow(hash_symbols.Length, N);
