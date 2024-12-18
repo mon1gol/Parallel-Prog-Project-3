@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace ProjectTwo.Core
 {
-    internal class Program
+    public class Program
     {
         /// <summary>
         /// Точка входа
